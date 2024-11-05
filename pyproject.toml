@@ -18,10 +18,10 @@ packages = [
 start = "aishaala_backend.main:main"
 
 [tool.poetry.dependencies]
-python = "^3.13"
+python = "~3.12"
 fastapi = { extras = ["standard"], version = "^0.115.4" }
 pydantic-settings = "^2.6.1"
-sqlalchemy = { extras = ["asyncio"], version = "^2.0.36" }
+sqlalchemy = { extras = ["asyncio"], version = "2.0.30" }
 asyncpg = "^0.30.0"
 alembic = "^1.14.0"
 sqladmin = "^0.20.1"
@@ -29,6 +29,7 @@ redis = "^5.2.0"
 aiohttp = "^3.10.10"
 passlib = "^1.7.4"
 itsdangerous = "^2.2.0"
+airag-python = {git = "git@github.com:vijayexult/airag-python.git", rev = "main"}
 
 [tool.poetry.group.dev.dependencies]
 python-dotenv = "^1.0.1"

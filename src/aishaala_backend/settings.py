@@ -2,7 +2,7 @@ from typing import Literal
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
-    model_config = SettingsConfigDict(env_file='../.env', validate_default=False, extra='ignore')
+    model_config = SettingsConfigDict(validate_default=False, extra='ignore')
 
     # APP Config
     DEBUG: bool = False
