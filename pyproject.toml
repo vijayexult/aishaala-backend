@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "aishaala-backend"
+version = "0.1.0"
+description = ""
+authors = ["Shrinath Shenoy <k.shrinath.shenoy@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "aishaala_backend", from = "src" },
+    { include = "admin", from = "src" },
+    { include = "models", from = "src" },
+    { include = "routes", from = "src" },
+    { include = "schemas", from = "src" },
+    { include = "services", from = "src" },
+    { include = "utils", from = "src" },
+]
+
+[tool.poetry.scripts]
+start = "aishaala_backend.main:main"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+fastapi = { extras = ["standard"], version = "^0.115.4" }
+pydantic-settings = "^2.6.1"
+sqlalchemy = { extras = ["asyncio"], version = "^2.0.36" }
+asyncpg = "^0.30.0"
+alembic = "^1.14.0"
+sqladmin = "^0.20.1"
+redis = "^5.2.0"
+aiohttp = "^3.10.10"
+passlib = "^1.7.4"
+itsdangerous = "^2.2.0"
+
+[tool.poetry.group.dev.dependencies]
+python-dotenv = "^1.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
